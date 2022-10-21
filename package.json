@@ -1,0 +1,30 @@
+{
+  "name": "e-com-backendapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keysbhag/E-Com-BackendApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.7"
+  },
+  "bugs": {
+    "url": "https://github.com/keysbhag/E-Com-BackendApp/issues"
+  },
+  "homepage": "https://github.com/keysbhag/E-Com-BackendApp#readme"
+}
