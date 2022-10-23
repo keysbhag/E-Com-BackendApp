@@ -21,12 +21,11 @@ router.get('/', async (req, res) => {
     ],
   });
     if (!productData){
-      res.status(404).json(err);
-    } else {
-      res.status(200).json(productData);
+      return res.status(404).json({ message: 'No product information!' });
     }
+    res.status(200).json(productData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({message: `internal server error: ${err}`});
   }
 });
 
@@ -48,12 +47,11 @@ router.get('/:id', async (req, res) => {
     ],
     });
     if (!productData){
-      res.status(404).json(err);
-    } else {
-      res.status(200).json(productData);
+       return res.status(404).json({ message: 'No product with this id!' });
     }
+    res.status(200).json(productData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({message: `internal server error: ${err}`});
   }
 });
 
@@ -138,8 +136,7 @@ router.delete('/:id', async (req, res) => {
       where: { id: req.params.id }
     });
     if (!prodData) {
-      res.status(404).json({ message: 'No product with this id!' });
-      return;
+      return res.status(404).json({ message: 'No product with this id!' });
     }
     res.status(200).json(prodData);
 

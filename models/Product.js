@@ -40,6 +40,8 @@ Product.init(
         model: 'category',
         key: 'id',
       },
+      onDelete: 'SET NULL',
+      onUpdate: 'SET NULL'
     },
   },
   {
