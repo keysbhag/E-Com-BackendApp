@@ -8,6 +8,7 @@ The motivation for building this project was to make a backend application for s
 ## Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Live Video Demonstration](#live-video-demonstration)
 * [Credits](#credits)
 * [License](#license)
 * [Contribute](#contribute)
@@ -81,6 +82,8 @@ To delete any category/tag/product use same route as "GET", and add specified id
 /api/tags/3
 ```
 
+## Live Video Demonstration
+Here is the link to the live video: https://www.youtube.com/watch?v=VFlIrq7L0rc
 
 ## Credits
 * Keyshawn Bhagwandin https://github.com/keysbhag
