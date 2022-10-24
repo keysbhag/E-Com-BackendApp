@@ -43,24 +43,61 @@ npm start
 ```
 
 ## Usage
-To use this backend app, you'll have to have insomnia downloaded as well so that you can run the functionality of this website 
+To use this backend app, you'll have to have insomnia downloaded as well so that you can run the functionality of this website.
+It will require you to know how to format your inputs, I will show examples below:
+
+To "GET" by a model, use: 
+```md
+/api/{products/catergories/tags}
+```
+To "GET" by an id, use:
+```md
+/api/{products/catergories/tags}/{some id number here}
+```
+To "POST/PUT" a product into the database, use the get route for products and submit something like for example:
+```md
+ {
+	"product_name": {"product name here"},
+	"price": {price here},
+	"stock": {some number here},
+	"category_id": {correlating category id here},
+	"tagIds": {[an array of tags ids here]}
+}
+```
+To "POST/PUT" a category into the database, use the get route for categories and submit:
+```md
+ {
+	"category_name": {"category name here"},
+}
+```
+To "POST/PUT" a tag into the database, use the get route for tags and submit:
+```md
+ {
+	"tag_name": {"tag name here"},
+}
+```
+To delete any category/tag/product use same route as "GET", and add specified id at the end for example:
+```md
+/api/tags/3
+```
 
 
 ## Credits
-any credits here 
-
+* Keyshawn Bhagwandin https://github.com/keysbhag
+* mysql2 https://www.npmjs.com/package/mysql2
+* Sequelize https://sequelize.org/
+* Insomnia https://insomnia.rest/download
 
 ## License
 MIT License, Here is the link for more details: https://opensource.org/licenses/MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] 
 
 
 ## Contribute 
-how to contribute here 
+N/A 
 
 
 ## Testing 
-any tests here 
-
+N/A
 
 ## Questions 
 Please free to email me at keyshawn.11@hotmail.com for any questions
