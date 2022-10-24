@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
         }
     ],
   });
+  // makes sure data base is seeded
     if (!productData){
       return res.status(404).json({ message: 'No product information!' });
     }
@@ -46,6 +47,7 @@ router.get('/:id', async (req, res) => {
         }
     ],
     });
+    // makes sure a proper Id is inputted
     if (!productData){
        return res.status(404).json({ message: 'No product with this id!' });
     }
@@ -59,10 +61,11 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "Basketball",
+      "price": 200.00,
+      "stock": 3,
+      "category_id": 2,
+      "tagIds": [1, 2, 3, 4]
     }
   */
   Product.create(req.body)
@@ -135,6 +138,7 @@ router.delete('/:id', async (req, res) => {
     const prodData = await Product.destroy({
       where: { id: req.params.id }
     });
+    // makes sure ID exists
     if (!prodData) {
       return res.status(404).json({ message: 'No product with this id!' });
     }

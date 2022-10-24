@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
 
+// Sets the ProductTag model for the Database
 ProductTag.init(
   {
     id: {
